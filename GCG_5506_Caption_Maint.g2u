@@ -1,0 +1,571 @@
+Program.Sub.ScreenSU.Start
+Gui.F_UserFieldsMaint..Create
+Gui.F_UserFieldsMaint..Size(12270,13755)
+Gui.F_UserFieldsMaint..MinX(0)
+Gui.F_UserFieldsMaint..MinY(0)
+Gui.F_UserFieldsMaint..Position(0,0)
+Gui.F_UserFieldsMaint..BackColor(-2147483633)
+Gui.F_UserFieldsMaint..MousePointer(0)
+Gui.F_UserFieldsMaint..Event(UnLoad,Form_UnLoad)
+Gui.F_UserFieldsMaint..Caption("User Fields Maintenance")
+Gui.F_UserFieldsMaint..MaxButton(False)
+Gui.F_UserFieldsMaint..Sizeable(False)
+Gui.F_UserFieldsMaint.frmPartUserFields.Create(Frame)
+Gui.F_UserFieldsMaint.frmPartUserFields.Size(5580,11550)
+Gui.F_UserFieldsMaint.frmPartUserFields.Position(75,1605)
+Gui.F_UserFieldsMaint.frmPartUserFields.Caption("GSS PART")
+Gui.F_UserFieldsMaint.frmPartUserFields.FontStyle(True,False,False,False,False)
+Gui.F_UserFieldsMaint.GsGcGssPartUserFields.Create(GsGridControl)
+Gui.F_UserFieldsMaint.GsGcGssPartUserFields.Size(5430,11160)
+Gui.F_UserFieldsMaint.GsGcGssPartUserFields.Position(60,285)
+Gui.F_UserFieldsMaint.GsGcGssPartUserFields.Parent("frmPartUserFields")
+Gui.F_UserFieldsMaint.frmXrefPartUserFields.Create(Frame)
+Gui.F_UserFieldsMaint.frmXrefPartUserFields.Size(5580,11550)
+Gui.F_UserFieldsMaint.frmXrefPartUserFields.Position(6360,1590)
+Gui.F_UserFieldsMaint.frmXrefPartUserFields.Caption("PART XREF")
+Gui.F_UserFieldsMaint.frmXrefPartUserFields.FontStyle(True,False,False,False,False)
+Gui.F_UserFieldsMaint.GsGcGssXrefPartUserFields.Create(GsGridControl)
+Gui.F_UserFieldsMaint.GsGcGssXrefPartUserFields.Size(5430,11160)
+Gui.F_UserFieldsMaint.GsGcGssXrefPartUserFields.Position(60,285)
+Gui.F_UserFieldsMaint.GsGcGssXrefPartUserFields.Parent("frmXrefPartUserFields")
+Gui.F_UserFieldsMaint.frmButtons.Create(Frame)
+Gui.F_UserFieldsMaint.frmButtons.Size(3165,1455)
+Gui.F_UserFieldsMaint.frmButtons.Position(8745,135)
+Gui.F_UserFieldsMaint.optGssParts.Create(Option)
+Gui.F_UserFieldsMaint.optGssParts.Size(1080,255)
+Gui.F_UserFieldsMaint.optGssParts.Position(90,150)
+Gui.F_UserFieldsMaint.optGssParts.Parent("frmButtons")
+Gui.F_UserFieldsMaint.optGssParts.Caption("GSS Part")
+Gui.F_UserFieldsMaint.optGssParts.FontStyle(True,False,False,False,False)
+Gui.F_UserFieldsMaint.optGssParts.Event(Click,optGssParts_Click)
+Gui.F_UserFieldsMaint.optXrefParts.Create(Option)
+Gui.F_UserFieldsMaint.optXrefParts.Size(1125,255)
+Gui.F_UserFieldsMaint.optXrefParts.Position(1200,150)
+Gui.F_UserFieldsMaint.optXrefParts.Parent("frmButtons")
+Gui.F_UserFieldsMaint.optXrefParts.Caption("Part Xref")
+Gui.F_UserFieldsMaint.optXrefParts.FontStyle(True,False,False,False,False)
+Gui.F_UserFieldsMaint.optXrefParts.Event(Click,optXrefParts_Click)
+Gui.F_UserFieldsMaint.optBoth.Create(Option)
+Gui.F_UserFieldsMaint.optBoth.Size(765,255)
+Gui.F_UserFieldsMaint.optBoth.Position(2310,135)
+Gui.F_UserFieldsMaint.optBoth.Parent("frmButtons")
+Gui.F_UserFieldsMaint.optBoth.Caption("Both")
+Gui.F_UserFieldsMaint.optBoth.DefaultValue("1")
+Gui.F_UserFieldsMaint.optBoth.FontStyle(True,False,False,False,False)
+Gui.F_UserFieldsMaint.optBoth.Event(Click,optBoth_Click)
+Gui.F_UserFieldsMaint.cmdSave.Create(Button)
+Gui.F_UserFieldsMaint.cmdSave.Size(1650,375)
+Gui.F_UserFieldsMaint.cmdSave.Position(1380,930)
+Gui.F_UserFieldsMaint.cmdSave.Parent("frmButtons")
+Gui.F_UserFieldsMaint.cmdSave.Caption("Save Captions")
+Gui.F_UserFieldsMaint.cmdSave.Event(Click,cmdSave_Click)
+Gui.F_UserFieldsMaint.cmdSave.FontStyle(True,False,False,False,False)
+Gui.F_UserFieldsMaint.cmdShow.Create(Button)
+Gui.F_UserFieldsMaint.cmdShow.Size(1650,375)
+Gui.F_UserFieldsMaint.cmdShow.Position(1380,465)
+Gui.F_UserFieldsMaint.cmdShow.Parent("frmButtons")
+Gui.F_UserFieldsMaint.cmdShow.Caption("Show Empty")
+Gui.F_UserFieldsMaint.cmdShow.Event(Click,cmdShow_Click)
+Gui.F_UserFieldsMaint.cmdShow.FontStyle(True,False,False,False,False)
+Gui.F_UserFieldsMaint.pic1.Create(PictureBox)
+Gui.F_UserFieldsMaint.pic1.Size(5460,1380)
+Gui.F_UserFieldsMaint.pic1.Position(120,105)
+Gui.F_UserFieldsMaint.pic1.Event(DblClick,pic1_DblClick)
+Gui.F_UserFieldsMaint.cmdCopyGss2Xref.Create(Button)
+Gui.F_UserFieldsMaint.cmdCopyGss2Xref.Size(540,540)
+Gui.F_UserFieldsMaint.cmdCopyGss2Xref.Position(5745,6555)
+Gui.F_UserFieldsMaint.cmdCopyGss2Xref.Caption(">>")
+Gui.F_UserFieldsMaint.cmdCopyGss2Xref.FontSize(10)
+Gui.F_UserFieldsMaint.cmdCopyGss2Xref.FontStyle(True,False,False,False,False)
+Gui.F_UserFieldsMaint.cmdCopyGss2Xref.Enabled(False)
+Gui.F_UserFieldsMaint.cmdCopyGss2Xref.Visible(False)
+Gui.F_UserFieldsMaint.cmdCopyXref2Gss.Create(Button)
+Gui.F_UserFieldsMaint.cmdCopyXref2Gss.Size(540,540)
+Gui.F_UserFieldsMaint.cmdCopyXref2Gss.Position(5745,7230)
+Gui.F_UserFieldsMaint.cmdCopyXref2Gss.Caption("<<")
+Gui.F_UserFieldsMaint.cmdCopyXref2Gss.FontSize(10)
+Gui.F_UserFieldsMaint.cmdCopyXref2Gss.FontStyle(True,False,False,False,False)
+Gui.F_UserFieldsMaint.cmdCopyXref2Gss.Enabled(False)
+Gui.F_UserFieldsMaint.cmdCopyXref2Gss.Visible(False)
+Gui.F_UserFieldsMaint.GsGcGroups.Create(GsGridControl)
+Gui.F_UserFieldsMaint.GsGcGroups.Size(2925,1500)
+Gui.F_UserFieldsMaint.GsGcGroups.Position(5730,60)
+Gui.F_UserFieldsMaint.chkShowUsed.Create(CheckBox)
+Gui.F_UserFieldsMaint.chkShowUsed.Size(1200,690)
+Gui.F_UserFieldsMaint.chkShowUsed.Position(8850,675)
+Gui.F_UserFieldsMaint.chkShowUsed.Caption("Show Used Fields Only")
+Gui.F_UserFieldsMaint.chkShowUsed.Event(Click,chkShowUsed_Click)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+v.Global.sUsed.Declare
+v.Global.bReload.Declare
+v.Global.bGssPart.Declare
+v.Global.bGssPart.set(true)
+v.Global.bXrefPart.Declare
+v.Global.bXrefPart.set(true)
+v.Global.bShowEmpty.Declare
+v.Global.bShowEmpty.set(true)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+f.Intrinsic.Control.Try
+
+	gui.F_UserFieldsMaint.optBoth.Value(1)
+	f.Intrinsic.Control.CallSub(loadPictureLogo)
+	f.Intrinsic.Control.CallSub(loadTables)
+	
+	
+	f.Intrinsic.Control.If(v.Global.bReload)
+		f.Intrinsic.Control.CallSub(loadTables)
+	f.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.Control.CallSub(LoadGroups)
+	f.Intrinsic.Control.CallSub(LoafGroupProperties)
+	
+	gui.F_UserFieldsMaint..Show
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+
+Program.Sub.Form_UnLoad.Start
+f.Intrinsic.Control.Try
+	f.Intrinsic.Control.End
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.Form_UnLoad.End
+
+Program.Sub.pic1_DblClick.Start
+f.Intrinsic.Control.Try
+	f.Intrinsic.Task.ShellExec(0,"Open","http://www.globalshopsolutions.com/login-customer","","",0)
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.pic1_DblClick.End
+
+Program.Sub.cmdShow_Click.Start
+v.Local.sFilter.Declare
+f.Intrinsic.Control.Try
+	f.Intrinsic.Control.If(v.Global.bGssPart)
+		f.Intrinsic.Control.If(v.Global.bShowEmpty)
+			f.Data.DataView.SetFilter("UserFieldsDT", "GssPartDV", "Trim([UF_Captions]) = '' and UF_Type = 'GSSPART'")
+		f.Intrinsic.Control.Else
+			f.Data.DataView.SetFilter("UserFieldsDT", "GssPartDV", "UF_Type = 'GSSPART'")
+		f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.Else
+		f.Data.DataView.SetFilter("UserFieldsDT", "GssPartDV", "UF_Type = 'GSSPART'")
+	f.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.Control.If(v.Global.bXrefPart)
+		f.Intrinsic.Control.If(v.Global.bShowEmpty)
+			f.Data.DataView.SetFilter("UserFieldsDT", "XrefPartDV", "UF_Captions = '' and UF_Type = 'XRFPART'")
+		f.Intrinsic.Control.Else
+			f.Data.DataView.SetFilter("UserFieldsDT", "XrefPartDV", "UF_Type = 'XRFPART'")
+		f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.Else
+		f.Data.DataView.SetFilter("UserFieldsDT", "XrefPartDV", "UF_Type = 'XRFPART'")
+	f.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.Control.If(v.Global.bShowEmpty)
+		gui.F_UserFieldsMaint.cmdShow.Caption("Show All")
+		v.Global.bShowEmpty.Set(False)
+	f.Intrinsic.Control.Else
+		gui.F_UserFieldsMaint.cmdShow.Caption("Show Empty")
+		v.Global.bShowEmpty.Set(True)
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdShow_Click.End
+
+Program.Sub.cmdSave_Click.Start
+v.Local.iCnt.Declare
+v.Local.sGroup.Declare
+v.Local.sSelected.Declare
+v.Local.bRet.Declare
+v.Local.iID.Declare
+v.Local.sSQL.Declare
+f.Intrinsic.Control.Try
+	f.Intrinsic.Control.If(v.DataTable.GssPartDT.Exists)
+		f.Data.DataTable.Close("GssPartDT")
+	f.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.Control.If(v.DataTable.GssPartDT.Exists)
+		f.Data.DataTable.Close("XrefPartDT")
+	f.Intrinsic.Control.EndIf
+	
+	f.Data.DataView.ToDataTable("UserFieldsDT", "GssPartDV", "GssPartDT")
+	f.Data.DataView.ToDataTable("UserFieldsDT", "XrefPartDV", "XrefPartDT")
+	f.Intrinsic.String.Build("Update GCG_5506_UF_Captions Set UF_CAPTIONS = '{0}' Where UF_ID = '0'", v.Screen.F_UserFieldsMaint!chkShowUsed.Value, v.Local.sSQL)
+	
+	f.ODBC.Connection!con.OpenCompanyConnection	
+		f.Data.DataTable.SaveToDB("GssPartDT", "con", "GCG_5506_UF_Captions", "User_Field*!*UF_Type*!*UF_ID", 256)
+		f.Data.DataTable.SaveToDB("XrefPartDT", "con", "GCG_5506_UF_Captions", "User_Field*!*UF_Type*!*UF_ID", 256)
+		f.ODBC.Connection!con.Execute("Delete From  GCG_5506_Groups")
+		f.Data.DataTable.SaveToDB("groupDT", "con", "GCG_5506_Groups", "CompanyCode*!*User_Group", 256)
+		f.ODBC.Connection!con.Execute(v.Local.sSQL)
+	f.ODBC.Connection!con.Close
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdSave_Click.End
+
+Program.Sub.loadPictureLogo.Start
+f.Intrinsic.Control.Try
+	'Load the Logo at the top of dash and the Icon
+	v.Local.sIcon.Declare(String)
+	v.Local.sGssLogo.Declare(String)
+	
+	f.Intrinsic.String.Build("{0}\ART\gss2.ico", v.Caller.GlobalDir, v.Local.sIcon)
+	f.Intrinsic.String.Build("{0}\ART\GAB_GSS_Logo_Green_Dash.png", v.Caller.GlobalDir, v.Local.sGssLogo)
+	gui.F_UserFieldsMaint.pic1.Picture(v.Local.sGssLogo)
+	gui.F_UserFieldsMaint..Icon(v.Local.sIcon)
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.loadPictureLogo.End
+
+Program.Sub.ErrorMsg.Start
+v.Local.sError.Declare
+
+'Closes ODBC connection, default to connection : "con"
+f.Intrinsic.Control.If(v.ODBC.con.State, =, 1)
+	f.ODBC.Connection!con.Close
+f.Intrinsic.Control.EndIf
+
+'Generic Error message.
+f.Intrinsic.String.Build("Project UserFieldsWoSuppy.g2u {0}{0}Subroutine: {1}{0}Error: {2} with Description: {3}", v.Ambient.NewLine, v.Args.CurrentSub, v.Ambient.ErrorNumber, v.Ambient.ErrorDescription, v.Local.sError)
+f.Intrinsic.UI.Msgbox(v.Local.sError)
+Program.Sub.ErrorMsg.End
+
+Program.Sub.loadTables.Start
+v.Local.sSort.Declare
+f.Intrinsic.Control.Try
+	f.ODBC.Connection!con.OpenCompanyConnection	
+		f.Data.DataTable.CreateFromSQL("UserFieldsDT", "con", "Select User_Field, UF_Type, IsNull(UF_Captions, '') as UF_Captions, UF_ID from GCG_5506_UF_Captions order by User_Field desc", true)
+	f.ODBC.Connection!con.Close
+	
+	'If there's nothing in the Datatable, it creates the needed records.
+	f.Intrinsic.Control.If(v.DataTable.UserFieldsDT.RowCount, =, 0)
+		f.Intrinsic.Control.CallSub(LoadStartingData)
+		
+		f.Intrinsic.Control.If(v.DataTable.UserFieldsDT.Exists)
+			f.Data.DataTable.Close("UserFieldsDT")
+		f.Intrinsic.Control.EndIf
+		
+		f.ODBC.Connection!con.OpenCompanyConnection	
+			f.Data.DataTable.SaveToDB("loadData", "con", "GCG_5506_UF_Captions", "User_Field*!*UF_Type*!*UF_ID", 256)
+			f.Data.DataTable.CreateFromSQL("UserFieldsDT", "con", "Select User_Field, UF_Type, IsNull(UF_Captions, '') as UF_Captions, UF_ID from GCG_5506_UF_Captions order by User_Field desc", true)
+		f.ODBC.Connection!con.Close
+
+		
+		f.Intrinsic.Control.If(v.DataTable.loadData.Exists)
+			f.Data.DataTable.Close("loadData")
+		f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.EndIf
+	
+	'If there are more records, check if the total number of user fields are the same.
+	f.Intrinsic.Control.If(v.DataTable.UserFieldsDT.RowCount, >, 0)
+		
+		v.Global.sUsed.Set(v.DataTable.UserFieldsDT(0).UF_Captions!FieldVal)
+		gui.F_UserFieldsMaint.chkShowUsed.Value(v.Global.sUsed.Trim)
+		
+'		v.Global.iUserFieldQty.Set(v.DataTable.UserFieldsDT(0).UF_Captions!FieldVal)
+'		f.Intrinsic.Control.If(v.Global.iUserFieldQty, =, v.Screen.F_UserFieldsMaint!txtUF_Qty.Text)
+		'If the total number are the same, create dataviews.
+			v.Local.sSort.Set("UF_ID ASC")
+			f.Data.DataView.Create("UserFieldsDT", "UserFieldsDV", 22)
+			f.Data.DataView.Create("UserFieldsDT", "GssPartDV", 22, "UF_Type = 'GSSPART'", v.Local.sSort)
+			f.Data.DataView.Create("UserFieldsDT", "XrefPartDV", 22, "UF_Type = 'XRFPART'", v.Local.sSort)
+			
+			f.Intrinsic.Control.If(v.DataView.UserFieldsDT!GssPartDV.RowCount, =, v.DataView.UserFieldsDT!XrefPartDV.RowCount)
+			f.Intrinsic.Control.AndIf(v.DataView.UserFieldsDT!XrefPartDV.RowCount, =, 60)
+				'f.Intrinsic.UI.Msgbox("Correct Data")
+				f.Intrinsic.Control.CallSub(createGridviews)
+			f.Intrinsic.Control.Else
+				f.Intrinsic.UI.Msgbox("Incorrect Data")
+			f.Intrinsic.Control.EndIf
+'		f.Intrinsic.Control.Else	
+'		'If the total number are not the same, call the Update Records Call sub.
+'			f.Intrinsic.Control.CallSub(UpdateStartingData, iPassedQTY, 60)
+'		f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.EndIf
+	
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.loadTables.End
+
+Program.Sub.createGridviews.Start
+f.Intrinsic.Control.Try
+	gui.F_UserFieldsMaint.GsGcGssPartUserFields.AddGridviewFromDataview("GssPartGV", "UserFieldsDT", "GssPartDV")
+	gui.F_UserFieldsMaint.GsGcGssPartUserFields.MainView("GssPartGV")
+	f.Intrinsic.Control.CallSub(formatGridViews, passedGsGc, "GsGcGssPartUserFields", passedGV, "GssPartGV")
+	
+	gui.F_UserFieldsMaint.GsGcGssXrefPartUserFields.AddGridviewFromDataview("XrefPartGV", "UserFieldsDT", "XrefPartDV")
+	gui.F_UserFieldsMaint.GsGcGssXrefPartUserFields.MainView("XrefPartGV")
+	f.Intrinsic.Control.CallSub(formatGridViews, passedGsGc, "GsGcGssXrefPartUserFields", passedGV, "XrefPartGV")
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.createGridviews.End
+
+Program.Sub.LoadStartingData.Start
+v.Local.iCnt.Declare
+v.Local.iQty.Declare
+v.Local.sTemp.Declare
+f.Intrinsic.Control.Try
+	v.Local.sTemp.Set(v.Screen.F_UserFieldsMaint!chkShowUsed.Value)
+	v.Local.iQty.Set(60)
+	
+	f.Data.DataTable.Create("loadData", true)
+	f.Data.DataTable.AddColumn("loadData", "User_Field", "String")
+	f.Data.DataTable.AddColumn("loadData", "UF_Type", "String")
+	f.Data.DataTable.AddColumn("loadData", "UF_Captions", "String")
+	f.Data.DataTable.AddColumn("loadData", "UF_ID", "Long")
+	
+	f.Data.DataTable.AddRow("loadData", "User_Field", "UserFieldsQty", "UF_Type", "UF_QTYS", "UF_Captions", v.Local.sTemp.Trim, "UF_ID", 0)
+'	f.Data.DataTable.AddRow("loadData", "User_Field", "UserFieldsQty", "UF_Type", "UF_QTYS", "UF_Captions", v.Local.sTemp.Trim)
+	
+	f.Intrinsic.Control.For(v.Local.iCnt, 1, v.Local.iQty, 1)
+		f.Intrinsic.String.Build("UserField_{0}", v.Local.iCnt, v.Local.sTemp)
+		f.Data.DataTable.AddRow("loadData", "User_Field", v.Local.sTemp, "UF_Type", "GSSPART", "UF_ID", v.Local.iCnt)
+		f.Data.DataTable.AddRow("loadData", "User_Field", v.Local.sTemp, "UF_Type", "XRFPART", "UF_ID", v.Local.iCnt)
+'		f.Data.DataTable.AddRow("loadData", "User_Field", v.Local.sTemp, "UF_Type", "GSSPART")
+'		f.Data.DataTable.AddRow("loadData", "User_Field", v.Local.sTemp, "UF_Type", "XRFPART")
+	f.Intrinsic.Control.Next(v.Local.iCnt)
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.LoadStartingData.End
+
+Program.Sub.UpdateStartingData.Start
+v.Local.iCnt.Declare
+v.Local.iQty.Declare
+v.Local.sTemp.Declare
+f.Intrinsic.Control.Try
+	v.Local.sTemp.Set(v.Screen.F_UserFieldsMaint!chkShowUsed.Value)
+	v.Local.iQty.Set(v.Args.iPassedQTY)
+	
+	f.Data.DataTable.Create("loadData", true)
+	f.Data.DataTable.AddColumn("loadData", "User_Field", "String")
+	f.Data.DataTable.AddColumn("loadData", "UF_Type", "String")
+	f.Data.DataTable.AddColumn("loadData", "UF_Captions", "String")
+	f.Data.DataTable.AddColumn("loadData", "UF_ID", "Long")
+	
+	f.Data.DataTable.AddRow("loadData", "User_Field", "UserFieldsQty", "UF_Type", "UF_QTYS", "UF_Captions", v.Local.sTemp.Trim, "UF_ID", 0)
+'	f.Data.DataTable.AddRow("loadData", "User_Field", "UserFieldsQty", "UF_Type", "UF_QTYS", "UF_Captions", v.Local.sTemp.Trim)
+	
+	f.Intrinsic.Control.For(v.Local.iCnt, 1, v.Local.iQty, 1)
+		f.Intrinsic.String.Build("UserField_{0}", v.Local.iCnt, v.Local.sTemp)
+		f.Data.DataTable.AddRow("loadData", "User_Field", v.Local.sTemp, "UF_Type", "GSSPART", "UF_ID", v.Local.iCnt)
+		f.Data.DataTable.AddRow("loadData", "User_Field", v.Local.sTemp, "UF_Type", "XRFPART", "UF_ID", v.Local.iCnt)
+'		f.Data.DataTable.AddRow("loadData", "User_Field", v.Local.sTemp, "UF_Type", "GSSPART")
+'		f.Data.DataTable.AddRow("loadData", "User_Field", v.Local.sTemp, "UF_Type", "XRFPART")
+	f.Intrinsic.Control.Next(v.Local.iCnt)
+	
+	f.ODBC.Connection!con.OpenCompanyConnection	
+'		f.Data.DataTable.SaveToDB("loadData", "con", "GCG_5506_UF_Captions", "User_Field*!*UF_Type", 1)
+		f.Data.DataTable.SaveToDB("loadData", "con", "GCG_5506_UF_Captions", "User_Field*!*UF_Type*!*UF_ID", 1)
+	f.ODBC.Connection!con.Close
+
+	f.Intrinsic.Control.If(v.DataTable.UserFieldsDT.Exists)
+		f.Data.DataTable.Close("UserFieldsDT")
+	f.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.Control.If(v.DataTable.loadData.Exists)
+		f.Data.DataTable.Close("loadData")
+	f.Intrinsic.Control.EndIf
+	
+	v.Global.bReload.Set(True)
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.UpdateStartingData.End
+
+Program.Sub.formatGridViews.Start
+f.Intrinsic.Control.Try
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "User_Field", "Caption", "User Fields")
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_Type", "Caption", "UF Type")
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_Captions", "Caption", "Captions")
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_ID", "Caption", "UF ID")
+	
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "User_Field", "HeaderFontBold", True)
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_Type", "HeaderFontBold", True)
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_Captions", "HeaderFontBold", True)
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_ID", "HeaderFontBold", True)
+	
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "User_Field", "Visible", True)
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_Type", "Visible", False)
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_Captions", "Visible", True)
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_ID", "Visible", False)
+	
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "User_Field", "ReadOnly", True)
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_Type", "ReadOnly", True)
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_Captions", "ReadOnly", False)
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_ID", "ReadOnly", True)
+	
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "User_Field", "AllowEdit", False)
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_Type", "AllowEdit", False)
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_Captions", "AllowEdit", True)
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_ID", "AllowEdit", False)	
+	
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "User_Field", "HeaderHAlignment", "Near")
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_Type", "HeaderHAlignment", "Near")
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_Captions", "HeaderHAlignment", "Near")
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_ID", "HeaderHAlignment", "Near")
+	
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "User_Field", "CellHAlignment", "Near")
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_Type", "CellHAlignment", "Near")
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_Captions", "CellHAlignment", "Near")
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_ID", "CellHAlignment", "Near")
+	
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "User_Field", "Fixed", "Left")
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_Type", "Fixed", "None")
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_Captions", "Fixed", "None")
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_ID", "Fixed", "None")
+	
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "User_Field", "MinWidth", 100)
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_Type", "MinWidth", 100)
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_Captions", "MinWidth", 200)
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_ID", "MinWidth", 100)
+	
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "User_Field", "HeaderBackColor", v.Color.GSS)
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_Type", "HeaderBackColor", v.Color.GSS)
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_Captions", "HeaderBackColor", v.Color.GSS)
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_ID", "HeaderBackColor", v.Color.GSS)
+	
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "User_Field", "HeaderForeColor", v.Color.White)
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_Type", "HeaderForeColor", v.Color.White)
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_Captions", "HeaderForeColor", v.Color.White)
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_ID", "HeaderForeColor", v.Color.White)
+	
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetColumnProperty(v.Args.passedGV, "UF_Captions", "MaxLength", 30)
+	
+	
+	gui.F_UserFieldsMaint.[v.Args.passedGsGc].SetGridviewProperty(v.Args.passedGV, "OptionsViewColumnAutoWidth", false)
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.formatGridViews.End
+
+Program.Sub.optGssParts_Click.Start
+f.Intrinsic.Control.Try
+	v.Global.bGssPart.Set(true)
+	v.Global.bXrefPart.Set(false)
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.optGssParts_Click.End
+
+Program.Sub.optXrefParts_Click.Start
+f.Intrinsic.Control.Try
+	v.Global.bGssPart.Set(false)
+	v.Global.bXrefPart.Set(true)
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.optXrefParts_Click.End
+
+Program.Sub.optBoth_Click.Start
+f.Intrinsic.Control.Try
+	v.Global.bGssPart.Set(true)
+	v.Global.bXrefPart.Set(true)
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.optBoth_Click.End
+
+Program.Sub.LoadGroups.Start
+v.Local.sSQL.Declare
+v.Local.sRet.Declare
+v.Local.iCnt.Declare
+v.Local.sGroups.Declare
+f.Intrinsic.Control.Try
+	f.Global.Security.GetAllUserGroups(v.Caller.CompanyCode, v.Local.sRet)
+	
+	f.Intrinsic.String.Split(v.Local.sRet, "*!*", v.Local.sGroups)
+	
+	f.Intrinsic.Control.For(v.Local.iCnt, 0, v.Local.sGroups.UBound, 1)
+		f.Intrinsic.String.RPad(v.Local.sGroups(v.Local.iCnt), " ", 8, v.Local.sGroups(v.Local.iCnt))
+		f.Intrinsic.String.Join(v.Local.sGroups, "*!*", v.Local.sRet)
+	f.Intrinsic.Control.Next(v.Local.iCnt)
+
+	f.Data.DataTable.CreateFromString("groupFromST", v.Local.sRet, "User_Group", "String", "$!$", "*!*", true)
+	'f.Data.DataTable.AddColumn("groupFromST", "Flag_Edit", "Boolean")
+	f.Data.DataTable.AddColumn("groupFromST", "CompanyCode", "String")
+	
+	f.Data.DataTable.SetValue("groupFromST", -1, "CompanyCode", v.Caller.CompanyCode)
+	
+	f.ODBC.Connection!con.OpenCompanyConnection
+		f.Intrinsic.String.Build("Select * from GCG_5506_Groups where CompanyCode = '{0}'", v.Caller.CompanyCode, v.Local.sSQL)
+		f.Data.DataTable.CreateFromSQL("groupFromDB", "con", v.Local.sSQL)
+	f.ODBC.Connection!con.Close
+	
+	f.Data.Linq.Join("LeftJoin", "datatable", "groupFromST*!*g", "datatable", "groupFromDB*!*d", "g.User_Group = d.User_Group", "g.CompanyCode*!*g.User_Group*!*d.Flag_Edit", "", "", "", "groupDT", true)
+	
+	f.Data.DataTable.Close("groupFromST")
+	f.Data.DataTable.Close("groupFromDB")
+	
+	gui.F_UserFieldsMaint.GsGcGroups.AddGridviewFromDatatable("groupGV", "groupDT")
+	gui.F_UserFieldsMaint.GsGcGroups.MainView("groupGV")	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.LoadGroups.End
+
+Program.Sub.LoafGroupProperties.Start
+f.Intrinsic.Control.Try
+	gui.F_UserFieldsMaint.GsGcGroups.SetColumnProperty("groupGV", "User_Group", "Caption", "Groups")
+	gui.F_UserFieldsMaint.GsGcGroups.SetColumnProperty("groupGV", "CompanyCode", "Caption", "CCC")
+	gui.F_UserFieldsMaint.GsGcGroups.SetColumnProperty("groupGV", "Flag_Edit", "Caption", "Edit")
+	
+	gui.F_UserFieldsMaint.GsGcGroups.SetColumnProperty("groupGV", "User_Group", "HeaderFontBold", true)
+	gui.F_UserFieldsMaint.GsGcGroups.SetColumnProperty("groupGV", "CompanyCode", "HeaderFontBold", true)
+	gui.F_UserFieldsMaint.GsGcGroups.SetColumnProperty("groupGV", "Flag_Edit", "HeaderFontBold", true)
+	
+	gui.F_UserFieldsMaint.GsGcGroups.SetColumnProperty("groupGV", "User_Group", "VisibleIndex", 0)
+	gui.F_UserFieldsMaint.GsGcGroups.SetColumnProperty("groupGV", "CompanyCode", "VisibleIndex", 2)
+	gui.F_UserFieldsMaint.GsGcGroups.SetColumnProperty("groupGV", "Flag_Edit", "VisibleIndex", 1)
+	
+	gui.F_UserFieldsMaint.GsGcGroups.SetColumnProperty("groupGV", "User_Group", "Visible", true)
+	gui.F_UserFieldsMaint.GsGcGroups.SetColumnProperty("groupGV", "CompanyCode", "Visible", false)
+	gui.F_UserFieldsMaint.GsGcGroups.SetColumnProperty("groupGV", "Flag_Edit", "Visible", true)
+	
+	gui.F_UserFieldsMaint.GsGcGroups.SetColumnProperty("groupGV", "User_Group", "AllowEdit", false)
+	gui.F_UserFieldsMaint.GsGcGroups.SetColumnProperty("groupGV", "CompanyCode", "AllowEdit", false)
+	gui.F_UserFieldsMaint.GsGcGroups.SetColumnProperty("groupGV", "Flag_Edit", "AllowEdit", true)
+	
+	gui.F_UserFieldsMaint.GsGcGroups.SetColumnProperty("groupGV", "User_Group", "ReadOnly", true)
+	gui.F_UserFieldsMaint.GsGcGroups.SetColumnProperty("groupGV", "CompanyCode", "ReadOnly", true)
+	gui.F_UserFieldsMaint.GsGcGroups.SetColumnProperty("groupGV", "Flag_Edit", "ReadOnly", false)
+	
+	gui.F_UserFieldsMaint.GsGcGroups.SetColumnProperty("groupGV", "User_Group", "HeaderHAlignment", "Center")
+	gui.F_UserFieldsMaint.GsGcGroups.SetColumnProperty("groupGV", "CompanyCode", "HeaderHAlignment", "Center")
+	gui.F_UserFieldsMaint.GsGcGroups.SetColumnProperty("groupGV", "Flag_Edit", "HeaderHAlignment", "Center")
+	
+	gui.F_UserFieldsMaint.GsGcGroups.SetColumnProperty("groupGV", "User_Group", "CellHAlignment", "Left")
+	gui.F_UserFieldsMaint.GsGcGroups.SetColumnProperty("groupGV", "CompanyCode", "CellHAlignment", "None")
+	gui.F_UserFieldsMaint.GsGcGroups.SetColumnProperty("groupGV", "Flag_Edit", "CellHAlignment", "Center")
+	
+	gui.F_UserFieldsMaint.GsGcGroups.SetColumnProperty("groupGV", "User_Group", "HeaderBackColor", v.Color.GSS)
+	gui.F_UserFieldsMaint.GsGcGroups.SetColumnProperty("groupGV", "CompanyCode", "HeaderBackColor", v.Color.GSS)
+	gui.F_UserFieldsMaint.GsGcGroups.SetColumnProperty("groupGV", "Flag_Edit", "HeaderBackColor", v.Color.GSS)
+	
+	gui.F_UserFieldsMaint.GsGcGroups.SetColumnProperty("groupGV", "User_Group", "HeaderForeColor", v.Color.White)
+	gui.F_UserFieldsMaint.GsGcGroups.SetColumnProperty("groupGV", "CompanyCode", "HeaderForeColor", v.Color.White)
+	gui.F_UserFieldsMaint.GsGcGroups.SetColumnProperty("groupGV", "Flag_Edit", "HeaderForeColor", v.Color.White)
+		
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.LoafGroupProperties.End
+
+Program.Sub.chkShowUsed_Click.Start
+Program.Sub.chkShowUsed_Click.End
+
+
